@@ -10,14 +10,14 @@ class Column extends React.Component {
     }
 
     render() {
-        const {title} = this.props;
+        const { title } = this.props;
 
         return (
-        <section className={styles.component}>
-          <h3 className={styles.title}>
-            {title}
-          </h3>
-          </section>
+            <section className={styles.component}>
+                <h3 className={styles.title}>
+                    {title}
+                </h3>
+            </section>
         )
     }
 }

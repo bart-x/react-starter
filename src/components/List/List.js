@@ -2,13 +2,20 @@ import React from 'react';
 import styles from './List.scss';
 import Hero from '../Hero/Hero.js'
 import PropTypes from 'prop-types';
-import {settings} from '../../data/dataStore';
+import { settings } from '../../data/dataStore';
 
 
 class List extends React.Component {
     static propTypes = {
         title: PropTypes.node.isRequired,
         children: PropTypes.node.isRequired,
+
+        /* description: PropTypes.node,
+            columns: PropTypes.array,
+
+            description: settings.defaultListDescription,
+            
+            ^ to zamiast tego powyżej? */
     }
 
     static defaultProps = {
@@ -18,7 +25,7 @@ class List extends React.Component {
     render() {
         return (
             <section className={styles.component}>
-                {/* <h2 className={styles.subtitle}>Organize your world</h2> */}
+                <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
                 <Hero titleText={this.props.title} />
             </section>
 
