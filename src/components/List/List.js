@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './List.scss';
-import Hero from '../Hero/Hero.js';
+import Hero from '../Hero/Hero';
 import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
-import Creator from '../Creator/Creator.js';
-import Column from '../Column/ColumnContainer.js';
+import Creator from '../Creator/Creator';
+import Column from '../Column/ColumnContainer';
 
 
 class List extends React.Component {
@@ -15,7 +15,7 @@ class List extends React.Component {
     description: PropTypes.node,
     columns: PropTypes.array,
     addColumn: PropTypes.func,
-    image: PropTypes.string,
+    image: PropTypes.isRequired,
   }
 
   static defaultProps = {
@@ -28,8 +28,8 @@ class List extends React.Component {
     return (
 
       <section className={styles.component}>
-        <h2 className={styles.title}>{ReactHtmlParser(title)}</h2>
-        <Hero titleText={title} image={image} />
+        {/* <h2 className={styles.title}>{ReactHtmlParser(title)}</h2> */}
+        <Hero title={title} image={image} />
         <div className={styles.description}>
           {ReactHtmlParser(description)}
         </div>

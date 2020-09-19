@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './App.scss';
-// import List from '../List/ListContainer.js';
-// import { pageContents, listData } from '../../data/dataStore.js';
+import List from '../List/ListContainer';
+// import { pageContents, listData } from '../../data/dataStore';
 import PropTypes from 'prop-types';
-import Search from '../Search/SearchContainer.js';
+import Search from '../Search/SearchContainer';
 
 class App extends React.Component {
   static propTypes = {
@@ -14,18 +14,18 @@ class App extends React.Component {
 
   render() {
 
-
-    const { title, subtitle } = this.props;
+    const { title, subtitle, lists } = this.props;
     return (
+
       <main className={styles.component}>
-        <Search />
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
-        {/* {
-          lists.map(listData => (
-            <List key={listData.id} {...listData} />
-          ))
-        } */}
+        <Search />
+
+        {lists.map(listData => (
+          <List key={listData.id} {...listData} />
+        ))}
+
       </main>
     );
   }
