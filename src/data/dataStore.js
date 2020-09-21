@@ -141,6 +141,23 @@ const cards = [
   },
 ];
 
+export const InfoData = {
+  title: 'Info',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.',
+};
+
+export const FAQData = {
+  title: 'FAQ',
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  subtitle1: 'Question 1',
+  text1: 'Lorem ipsum dolor sit amet.',
+  subtitle2: 'Question 2',
+  text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  subtitle3: 'Question 3',
+  text3: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+};
+
 const initialStoreData = {
   app: {...pageContents},
   lists: [...lists],
